@@ -3,27 +3,30 @@
 package storage
 
 import (
+	"database/sql"
 	"path/filepath"
 
-	"crawshaw.io/sqlite"
-	"crawshaw.io/sqlite/sqlitex"
+	_ "github.com/mattn/go-sqlite3"
 
 	"github.com/anacrolix/torrent/metainfo"
 )
 
 type sqlitePieceCompletion struct {
-	db *sqlite.Conn
+	db *sql.DB
 }
 
 var _ PieceCompletion = (*sqlitePieceCompletion)(nil)
 
 func NewSqlitePieceCompletion(dir string) (ret *sqlitePieceCompletion, err error) {
 	p := filepath.Join(dir, ".torrent.db")
-	db, err := sqlite.OpenConn(p, 0)
+	db, err := sql.Open("sqlite3", p)
 	if err != nil {
 		return
 	}
-	err = sqlitex.ExecScript(db, `create table if not exists piece_completion(infohash, "index", complete, unique(infohash, "index"))`)
+	db.SetMaxOpenConns(1)
+	db.Exec(`PRAGMA journal_mode=WAL`)
+	db.Exec(`PRAGMA synchronous=1`)
+	_, err = db.Exec(`create table if not exists piece_completion(infohash, "index", complete, unique(infohash, "index"))`)
 	if err != nil {
 		db.Close()
 		return
@@ -33,23 +36,19 @@ func NewSqlitePieceCompletion(dir string) (ret *sqlitePieceCompletion, err error
 }
 
 func (me *sqlitePieceCompletion) Get(pk metainfo.PieceKey) (c Completion, err error) {
-	err = sqlitex.Exec(
-		me.db, `select complete from piece_completion where infohash=? and "index"=?`,
-		func(stmt *sqlite.Stmt) error {
-			c.Complete = stmt.ColumnInt(0) != 0
-			c.Ok = true
-			return nil
-		},
-		pk.InfoHash.HexString(), pk.Index)
+	row := me.db.QueryRow(`select complete from piece_completion where infohash=? and "index"=?`, pk.InfoHash.HexString(), pk.Index)
+	err = row.Scan(&c.Complete)
+	if err == sql.ErrNoRows {
+		err = nil
+	} else if err == nil {
+		c.Ok = true
+	}
 	return
 }
 
 func (me *sqlitePieceCompletion) Set(pk metainfo.PieceKey, b bool) error {
-	return sqlitex.Exec(
-		me.db,
-		`insert or replace into piece_completion(infohash, "index", complete) values(?, ?, ?)`,
-		nil,
-		pk.InfoHash.HexString(), pk.Index, b)
+	_, err := me.db.Exec(`insert or replace into piece_completion(infohash, "index", complete) values(?, ?, ?)`, pk.InfoHash.HexString(), pk.Index, b)
+	return err
 }
 
 func (me *sqlitePieceCompletion) Close() error {
