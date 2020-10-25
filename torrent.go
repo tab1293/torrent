@@ -32,8 +32,8 @@ import (
 	"github.com/anacrolix/missinggo/v2/bitmap"
 	"github.com/anacrolix/missinggo/v2/prioritybitmap"
 
-	"github.com/tab1293/torrent/bencode"
 	"github.com/anacrolix/torrent/metainfo"
+	"github.com/tab1293/torrent/bencode"
 	pp "github.com/tab1293/torrent/peer_protocol"
 	"github.com/tab1293/torrent/storage"
 	"github.com/tab1293/torrent/tracker"
@@ -1139,7 +1139,7 @@ func (t *Torrent) updatePieceCompletion(piece pieceIndex) bool {
 		t.logger.Printf("marked piece %v complete but still has dirtiers", piece)
 	}
 	if changed {
-		log.Fstr("piece %d completion changed: %+v -> %+v", piece, cached, uncached).SetLevel(log.Debug).Log(t.logger)
+		// log.Fstr("piece %d completion changed: %+v -> %+v", piece, cached, uncached).SetLevel(log.Debug).Log(t.logger)
 		t.pieceCompletionChanged(piece)
 	}
 	return changed
