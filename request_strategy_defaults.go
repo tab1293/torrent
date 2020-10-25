@@ -3,7 +3,7 @@ package torrent
 import (
 	"github.com/anacrolix/missinggo/iter"
 	"github.com/anacrolix/missinggo/v2/bitmap"
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	pp "github.com/tab1293/torrent/peer_protocol"
 )
 
 // Provides default implementations for requestStrategy methods. Could be embedded, or delegated to.

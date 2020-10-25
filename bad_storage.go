@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/storage"
 )
 
 type badStorage struct{}

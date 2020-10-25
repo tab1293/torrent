@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent/bencode"
 )
 
 func TestUnmarshalHTTPResponsePeerDicts(t *testing.T) {

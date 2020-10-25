@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 
 	"github.com/anacrolix/missinggo"
-	"github.com/anacrolix/torrent/common"
-	"github.com/anacrolix/torrent/segments"
+	"github.com/tab1293/torrent/common"
+	"github.com/tab1293/torrent/segments"
 
 	"github.com/anacrolix/torrent/metainfo"
 )

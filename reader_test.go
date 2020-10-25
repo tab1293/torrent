@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/anacrolix/torrent/internal/testutil"
+	"github.com/tab1293/torrent/internal/testutil"
 )
 
 func TestReaderReadContext(t *testing.T) {

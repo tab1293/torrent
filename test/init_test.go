@@ -2,7 +2,7 @@ package test
 
 import (
 	_ "github.com/anacrolix/envpprof"
-	"github.com/anacrolix/torrent"
+	"github.com/tab1293/torrent"
 )
 
 func init() {

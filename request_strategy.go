@@ -8,7 +8,7 @@ import (
 	"github.com/anacrolix/missinggo/v2/bitmap"
 	"github.com/anacrolix/missinggo/v2/prioritybitmap"
 
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	pp "github.com/tab1293/torrent/peer_protocol"
 )
 
 type requestStrategyPiece interface {

@@ -6,8 +6,8 @@ import (
 	"github.com/anacrolix/tagflag"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/anacrolix/torrent"
-	"github.com/anacrolix/torrent/tracker"
+	"github.com/tab1293/torrent"
+	"github.com/tab1293/torrent/tracker"
 )
 
 func announceErr(args []string, parent *tagflag.Parser) error {

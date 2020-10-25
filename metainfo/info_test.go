@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent/bencode"
 )
 
 func TestMarshalInfo(t *testing.T) {

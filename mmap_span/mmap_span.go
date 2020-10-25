@@ -6,7 +6,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/anacrolix/torrent/segments"
+	"github.com/tab1293/torrent/segments"
 	"github.com/edsrzf/mmap-go"
 )
 

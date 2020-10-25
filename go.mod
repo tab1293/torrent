@@ -1,4 +1,4 @@
-module github.com/anacrolix/torrent
+module github.com/tab1293/torrent
 
 require (
 	bazil.org/fuse v0.0.0-20200407214033-5883e5a4b512
@@ -13,6 +13,7 @@ require (
 	github.com/anacrolix/multiless v0.0.0-20200413040533-acfd16f65d5d
 	github.com/anacrolix/sync v0.2.0
 	github.com/anacrolix/tagflag v1.1.1-0.20200411025953-9bb5209d56c2
+	github.com/anacrolix/torrent v1.18.0
 	github.com/anacrolix/upnp v0.1.2-0.20200416075019-5e9378ed1425
 	github.com/anacrolix/utp v0.0.0-20180219060659-9e0e1d1d0572
 	github.com/bradfitz/iter v0.0.0-20191230175014-e8f45d346db8

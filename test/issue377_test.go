@@ -7,15 +7,15 @@ import (
 	"testing"
 
 	"github.com/anacrolix/log"
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	pp "github.com/tab1293/torrent/peer_protocol"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anacrolix/torrent"
-	"github.com/anacrolix/torrent/internal/testutil"
+	"github.com/tab1293/torrent"
+	"github.com/tab1293/torrent/internal/testutil"
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/storage"
 )
 
 func justOneNetwork(cc *torrent.ClientConfig) {

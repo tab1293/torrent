@@ -1,7 +1,7 @@
 package torrent
 
 import (
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	pp "github.com/tab1293/torrent/peer_protocol"
 )
 
 // These are called synchronously, and do not pass ownership. The Client and other locks may still

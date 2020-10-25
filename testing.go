@@ -1,7 +1,7 @@
 package torrent
 
 import (
-	"github.com/anacrolix/torrent/internal/tmproot"
+	"github.com/tab1293/torrent/internal/tmproot"
 )
 
 var TestingTempDir tmproot.Dir

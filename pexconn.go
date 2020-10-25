@@ -6,7 +6,7 @@ import (
 
 	"github.com/anacrolix/log"
 
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	pp "github.com/tab1293/torrent/peer_protocol"
 )
 
 const (

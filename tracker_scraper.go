@@ -11,7 +11,7 @@ import (
 	"github.com/anacrolix/dht/v2/krpc"
 	"github.com/anacrolix/log"
 
-	"github.com/anacrolix/torrent/tracker"
+	"github.com/tab1293/torrent/tracker"
 )
 
 // Announces a torrent to a tracker at regular intervals, when peers are

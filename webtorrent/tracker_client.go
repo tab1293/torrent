@@ -9,7 +9,7 @@ import (
 
 	"github.com/anacrolix/log"
 
-	"github.com/anacrolix/torrent/tracker"
+	"github.com/tab1293/torrent/tracker"
 	"github.com/gorilla/websocket"
 	"github.com/pion/datachannel"
 	"github.com/pion/webrtc/v2"

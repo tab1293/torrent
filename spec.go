@@ -2,7 +2,7 @@ package torrent
 
 import (
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/storage"
 )
 
 // Specifies a new torrent for adding to a client. There are helpers for magnet URIs and torrent

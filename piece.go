@@ -7,8 +7,8 @@ import (
 	"github.com/anacrolix/missinggo/v2/bitmap"
 
 	"github.com/anacrolix/torrent/metainfo"
-	pp "github.com/anacrolix/torrent/peer_protocol"
-	"github.com/anacrolix/torrent/storage"
+	pp "github.com/tab1293/torrent/peer_protocol"
+	"github.com/tab1293/torrent/storage"
 )
 
 // Describes the importance of obtaining a particular piece.

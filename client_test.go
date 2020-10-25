@@ -19,11 +19,11 @@ import (
 	"github.com/anacrolix/missinggo"
 	"github.com/anacrolix/missinggo/v2/filecache"
 
-	"github.com/anacrolix/torrent/bencode"
-	"github.com/anacrolix/torrent/internal/testutil"
+	"github.com/tab1293/torrent/bencode"
+	"github.com/tab1293/torrent/internal/testutil"
 	"github.com/anacrolix/torrent/iplist"
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/storage"
 )
 
 func TestClientDefault(t *testing.T) {
@@ -48,7 +48,7 @@ func TestBoltPieceCompletionClosedWhenClientClosed(t *testing.T) {
 	cl, err := NewClient(cfg)
 	require.NoError(t, err)
 	cl.Close()
-	// And again, https://github.com/anacrolix/torrent/issues/158
+	// And again, https://github.com/tab1293/torrent/issues/158
 	cl, err = NewClient(cfg)
 	require.NoError(t, err)
 	cl.Close()
@@ -674,7 +674,7 @@ func makeMagnet(t *testing.T, cl *Client, dir string, name string) string {
 	return magnet
 }
 
-// https://github.com/anacrolix/torrent/issues/114
+// https://github.com/tab1293/torrent/issues/114
 func TestMultipleTorrentsWithEncryption(t *testing.T) {
 	testSeederLeecherPair(
 		t,

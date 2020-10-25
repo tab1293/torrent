@@ -12,11 +12,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anacrolix/torrent/bencode"
-	"github.com/anacrolix/torrent/internal/testutil"
+	"github.com/tab1293/torrent/bencode"
+	"github.com/tab1293/torrent/internal/testutil"
 	"github.com/anacrolix/torrent/metainfo"
-	pp "github.com/anacrolix/torrent/peer_protocol"
-	"github.com/anacrolix/torrent/storage"
+	pp "github.com/tab1293/torrent/peer_protocol"
+	"github.com/tab1293/torrent/storage"
 )
 
 func r(i, b, l pp.Integer) request {

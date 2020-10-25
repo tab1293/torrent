@@ -11,9 +11,9 @@ import (
 
 	"github.com/anacrolix/tagflag"
 
-	"github.com/anacrolix/torrent"
+	"github.com/tab1293/torrent"
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/tracker"
+	"github.com/tab1293/torrent/tracker"
 )
 
 func argSpec(arg string) (ts *torrent.TorrentSpec, err error) {

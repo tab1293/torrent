@@ -13,10 +13,10 @@ import (
 
 	"crawshaw.io/sqlite"
 	"github.com/anacrolix/missinggo/v2/filecache"
-	"github.com/anacrolix/torrent"
-	"github.com/anacrolix/torrent/internal/testutil"
-	"github.com/anacrolix/torrent/storage"
-	sqliteStorage "github.com/anacrolix/torrent/storage/sqlite"
+	"github.com/tab1293/torrent"
+	"github.com/tab1293/torrent/internal/testutil"
+	"github.com/tab1293/torrent/storage"
+	sqliteStorage "github.com/tab1293/torrent/storage/sqlite"
 	"golang.org/x/time/rate"
 
 	"github.com/stretchr/testify/assert"

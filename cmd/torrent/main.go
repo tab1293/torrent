@@ -23,10 +23,10 @@ import (
 	"github.com/anacrolix/tagflag"
 	"golang.org/x/time/rate"
 
-	"github.com/anacrolix/torrent"
+	"github.com/tab1293/torrent"
 	"github.com/anacrolix/torrent/iplist"
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/storage"
 )
 
 func torrentBar(t *torrent.Torrent, pieceStates bool) {

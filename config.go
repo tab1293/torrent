@@ -15,8 +15,8 @@ import (
 	"golang.org/x/time/rate"
 
 	"github.com/anacrolix/torrent/iplist"
-	"github.com/anacrolix/torrent/mse"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/mse"
+	"github.com/tab1293/torrent/storage"
 )
 
 // Probably not safe to modify this after it's given to a Client.
@@ -151,7 +151,7 @@ func NewDefaultClientConfig() *ClientConfig {
 		HTTPUserAgent:                  "Go-Torrent/1.0",
 		ExtendedHandshakeClientVersion: "go.torrent dev 20181121",
 		Bep20:                          "-GT0002-",
-		UpnpID:                         "anacrolix/torrent",
+		UpnpID:                         "tab1293/torrent",
 		NominalDialTimeout:             20 * time.Second,
 		MinDialTimeout:                 3 * time.Second,
 		EstablishedConnsPerTorrent:     50,

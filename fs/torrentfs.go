@@ -10,7 +10,7 @@ import (
 	"bazil.org/fuse"
 	fusefs "bazil.org/fuse/fs"
 
-	"github.com/anacrolix/torrent"
+	"github.com/tab1293/torrent"
 	"github.com/anacrolix/torrent/metainfo"
 )
 

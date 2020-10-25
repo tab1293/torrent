@@ -7,8 +7,8 @@ import (
 
 	"github.com/anacrolix/log"
 
-	"github.com/anacrolix/torrent/tracker"
-	"github.com/anacrolix/torrent/webtorrent"
+	"github.com/tab1293/torrent/tracker"
+	"github.com/tab1293/torrent/webtorrent"
 	"github.com/pion/datachannel"
 )
 

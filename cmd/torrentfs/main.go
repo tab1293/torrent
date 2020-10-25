@@ -18,9 +18,9 @@ import (
 	_ "github.com/anacrolix/envpprof"
 	"github.com/anacrolix/tagflag"
 
-	"github.com/anacrolix/torrent"
-	"github.com/anacrolix/torrent/fs"
-	"github.com/anacrolix/torrent/util/dirwatch"
+	"github.com/tab1293/torrent"
+	"github.com/tab1293/torrent/fs"
+	"github.com/tab1293/torrent/util/dirwatch"
 )
 
 var (

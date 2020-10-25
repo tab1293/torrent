@@ -3,8 +3,8 @@ package torrent
 import (
 	"github.com/anacrolix/dht/v2/krpc"
 
-	"github.com/anacrolix/torrent/peer_protocol"
-	"github.com/anacrolix/torrent/tracker"
+	"github.com/tab1293/torrent/peer_protocol"
+	"github.com/tab1293/torrent/tracker"
 )
 
 // Helper-type used to bulk-manage PeerInfos.

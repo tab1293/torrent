@@ -11,7 +11,7 @@ import (
 	"github.com/edsrzf/mmap-go"
 
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/mmap_span"
+	"github.com/tab1293/torrent/mmap_span"
 )
 
 type mmapClientImpl struct {

@@ -4,7 +4,7 @@ import (
 	"net"
 
 	"github.com/anacrolix/dht/v2/krpc"
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent/bencode"
 )
 
 type PexMsg struct {
@@ -109,7 +109,7 @@ func (m *PexMsg) Message(pexExtendedId ExtensionNumber) Message {
 }
 
 func LoadPexMsg(b []byte) (*PexMsg, error) {
-	m := new(PexMsg) 
+	m := new(PexMsg)
 	if err := bencode.Unmarshal(b, m); err != nil {
 		return nil, err
 	}

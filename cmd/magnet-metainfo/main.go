@@ -10,8 +10,8 @@ import (
 	_ "github.com/anacrolix/envpprof"
 	"github.com/anacrolix/tagflag"
 
-	"github.com/anacrolix/torrent"
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent"
+	"github.com/tab1293/torrent/bencode"
 )
 
 func main() {

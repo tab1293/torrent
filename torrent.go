@@ -17,11 +17,11 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/anacrolix/torrent/common"
-	"github.com/anacrolix/torrent/segments"
-	"github.com/anacrolix/torrent/webseed"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/pion/datachannel"
+	"github.com/tab1293/torrent/common"
+	"github.com/tab1293/torrent/segments"
+	"github.com/tab1293/torrent/webseed"
 
 	"github.com/anacrolix/dht/v2"
 	"github.com/anacrolix/log"
@@ -32,12 +32,12 @@ import (
 	"github.com/anacrolix/missinggo/v2/bitmap"
 	"github.com/anacrolix/missinggo/v2/prioritybitmap"
 
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent/bencode"
 	"github.com/anacrolix/torrent/metainfo"
-	pp "github.com/anacrolix/torrent/peer_protocol"
-	"github.com/anacrolix/torrent/storage"
-	"github.com/anacrolix/torrent/tracker"
-	"github.com/anacrolix/torrent/webtorrent"
+	pp "github.com/tab1293/torrent/peer_protocol"
+	"github.com/tab1293/torrent/storage"
+	"github.com/tab1293/torrent/tracker"
+	"github.com/tab1293/torrent/webtorrent"
 )
 
 // Maintains state of torrent within a Client. Many methods should not be called before the info is
@@ -214,7 +214,7 @@ func (t *Torrent) KnownSwarm() (ks []PeerInfo) {
 			// > what's appropriate. We can carry forward the SupportsEncryption value as we
 			// > received it from trackers/DHT/PEX, or just use the encryption state for the
 			// > connection. It's probably easiest to do the latter for now.
-			// https://github.com/anacrolix/torrent/pull/188
+			// https://github.com/tab1293/torrent/pull/188
 			SupportsEncryption: conn.headerEncrypted,
 		})
 	}
@@ -1583,7 +1583,7 @@ func (t *Torrent) addPeers(peers []PeerInfo) (added int) {
 }
 
 // The returned TorrentStats may require alignment in memory. See
-// https://github.com/anacrolix/torrent/issues/383.
+// https://github.com/tab1293/torrent/issues/383.
 func (t *Torrent) Stats() TorrentStats {
 	t.cl.rLock()
 	defer t.cl.rUnlock()

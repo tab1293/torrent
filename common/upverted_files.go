@@ -2,7 +2,7 @@ package common
 
 import (
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/segments"
+	"github.com/tab1293/torrent/segments"
 )
 
 func LengthIterFromUpvertedFiles(fis []metainfo.FileInfo) segments.LengthIter {

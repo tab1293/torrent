@@ -24,24 +24,24 @@ import (
 	"github.com/anacrolix/missinggo/slices"
 	"github.com/anacrolix/missinggo/v2/pproffd"
 	"github.com/anacrolix/sync"
-	"github.com/anacrolix/torrent/tracker"
-	"github.com/anacrolix/torrent/webtorrent"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/dustin/go-humanize"
 	"github.com/google/btree"
 	"github.com/pion/datachannel"
+	"github.com/tab1293/torrent/tracker"
+	"github.com/tab1293/torrent/webtorrent"
 	"golang.org/x/time/rate"
 	"golang.org/x/xerrors"
 
 	"github.com/anacrolix/missinggo/v2"
 	"github.com/anacrolix/missinggo/v2/conntrack"
 
-	"github.com/anacrolix/torrent/bencode"
 	"github.com/anacrolix/torrent/iplist"
 	"github.com/anacrolix/torrent/metainfo"
-	"github.com/anacrolix/torrent/mse"
-	pp "github.com/anacrolix/torrent/peer_protocol"
-	"github.com/anacrolix/torrent/storage"
+	"github.com/tab1293/torrent/bencode"
+	"github.com/tab1293/torrent/mse"
+	pp "github.com/tab1293/torrent/peer_protocol"
+	"github.com/tab1293/torrent/storage"
 )
 
 // Clients contain zero or more Torrents. A Client manages a blocklist, the

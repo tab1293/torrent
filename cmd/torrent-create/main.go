@@ -6,7 +6,7 @@ import (
 
 	"github.com/anacrolix/tagflag"
 
-	"github.com/anacrolix/torrent/bencode"
+	"github.com/tab1293/torrent/bencode"
 	"github.com/anacrolix/torrent/metainfo"
 )
 

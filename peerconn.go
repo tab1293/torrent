@@ -21,9 +21,9 @@ import (
 	"github.com/anacrolix/torrent/metainfo"
 	"github.com/pkg/errors"
 
-	"github.com/anacrolix/torrent/bencode"
-	"github.com/anacrolix/torrent/mse"
-	pp "github.com/anacrolix/torrent/peer_protocol"
+	"github.com/tab1293/torrent/bencode"
+	"github.com/tab1293/torrent/mse"
+	pp "github.com/tab1293/torrent/peer_protocol"
 )
 
 type PeerSource string

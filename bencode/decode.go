@@ -346,7 +346,7 @@ func (d *Decoder) parseList(v reflect.Value) error {
 	switch v.Kind() {
 	default:
 		// If the list is a singleton of the expected type, use that value. See
-		// https://github.com/anacrolix/torrent/issues/297.
+		// https://github.com/tab1293/torrent/issues/297.
 		l := reflect.New(reflect.SliceOf(v.Type()))
 		if err := d.parseList(l.Elem()); err != nil {
 			return err
