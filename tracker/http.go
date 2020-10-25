@@ -76,6 +76,7 @@ func setAnnounceParams(_url *url.URL, ar *AnnounceRequest, opts Announce) {
 	q.Set("port", fmt.Sprintf("%d", ar.Port))
 	q.Set("uploaded", strconv.FormatInt(ar.Uploaded, 10))
 	q.Set("downloaded", strconv.FormatInt(ar.Downloaded, 10))
+	q.Set("numwant", "80")
 
 	// The AWS S3 tracker returns "400 Bad Request: left(-1) was not in the valid range 0 -
 	// 9223372036854775807" if left is out of range, or "500 Internal Server Error: Internal Server
